@@ -1,0 +1,42 @@
+header {
+  background: rgba(207, 212, 217, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  padding-right: 20px;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  .header--container {
+    width: $maxwidth;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 25px;
+    .header__subjects {
+      display: flex;
+      width: 100%;
+      flex-direction: row-reverse;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        li {
+          transition: 0.2s ease-in;
+        }
+      }
+    }
+  }
+
+  img {
+    height: 150px;
+  }
+}
