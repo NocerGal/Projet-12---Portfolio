@@ -1,15 +1,18 @@
 import Header from './components/header/Header';
 
-import Logo from './assets/1.png';
-import Home from './components/home/Home';
-import Picture from './assets/photoLuc.jpeg';
+import Infos from './components/Infos/Infos';
+import Presentation from './components/presentation/Presentation';
 
 export function App() {
   return (
     <>
-      <Header logo={Logo} alt="logo" />
+      <Header alt="logo" />
       <main>
-        <Home picture={Picture} alt="Photo de Schenherr Luc" />
+        <Infos
+          github="https://github.com/NocerGal"
+          alt="Photo de Schenherr Luc"
+        />
+        <Presentation />
       </main>
     </>
   );

@@ -17,6 +17,7 @@ body {
 section {
   max-width: 1200px;
   margin: 0 auto;
+  height: 100vh;
 }
 
 h1 {
@@ -25,6 +26,7 @@ h1 {
   font-weight: 700;
   color: rgb(227, 227, 255);
   letter-spacing: 3px;
+  transition: 1.5s ease-in-out;
 }
 
 h2 {
@@ -33,6 +35,17 @@ h2 {
   font-weight: 700;
   color: rgba(28, 28, 91, 0.7);
   letter-spacing: 3px;
+  transition: 1.5s ease-in-out;
+  transition-delay: 0.7s;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(28, 28, 91, 0.7);
+  letter-spacing: 1px;
+  text-align: justify;
 }
 
 .blurred {
@@ -52,6 +65,34 @@ header {
   width: 100%;
   z-index: 2;
   position: fixed;
+}
+header .github-corner .github-logo {
+  color: #fafafa;
+  cursor: pointer;
+  height: 85px;
+  width: 85px;
+}
+header .github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  header .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  header .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
 }
 header .header--container {
   width: 1200px;
@@ -79,29 +120,103 @@ header img {
   height: 150px;
 }
 
-.home {
-  height: 85vh;
+#home {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.home .pres--container {
+#home .pres--container {
   display: flex;
   height: 500px;
   gap: 50px;
   position: relative;
   padding: 30px;
 }
-.home .pres--container img {
+#home .pres--container img {
   border-radius: 30px;
+  transform: translateX(-300%);
+  transition: 3.5s ease-in-out;
 }
-.home .pres--container .pres {
+#home .pres--container .pres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 30px;
+  padding-top: 0;
   border-radius: 30px;
+  gap: 60px;
+  overflow: hidden;
 }
-.home .pres--container .pres .circle--1 {
+#home .pres--container .pres .pres__name h1 {
+  margin-top: 0;
+  text-wrap: nowrap;
+  transform: translateY(-100%);
+}
+#home .pres--container .pres .pres__name h2 {
+  text-wrap: nowrap;
+  transform: translateY(-300px);
+}
+#home .pres--container .pres .pres__skills {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+#home .pres--container .pres .pres__skills svg {
+  cursor: pointer;
+  height: 90px;
+  width: 90px;
+}
+#home .pres--container .pres .pres__skills .svg-inline--fa {
+  transform: translateY(100%);
+  transition: 0.8s ease-in-out;
+}
+#home .pres--container .pres .pres__skills .html {
+  transition-delay: 0.5s;
+}
+#home .pres--container .pres .pres__skills .css {
+  transition-delay: 0.65s;
+}
+#home .pres--container .pres .pres__skills .github {
+  transition-delay: 0.75s;
+}
+#home .pres--container .pres .pres__skills .sass {
+  transition-delay: 0.85s;
+}
+#home .pres--container .pres .pres__skills .javascript {
+  transition-delay: 1.05s;
+}
+#home .pres--container .pres .pres__skills .react {
+  transition-delay: 1.1s;
+}
+#home .pres--container .pres .circle--1 {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  opacity: 0.3;
+  rotate: 0.6turn;
+  height: 27vh;
+  width: 34vw;
+  border-radius: 100%;
+  background: rgba(155, 155, 226, 0.31);
+  border-radius: 150px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  transition: all 1s ease-in-out;
+  animation: rotate 4s linear infinite;
+  animation-play-state: paused;
+  z-index: -2;
+}
+#home .pres--container .pres .circle--1:hover {
+  animation-play-state: running;
+  animation: rotate 4s linear infinite;
+}
+#home .pres--container .pres .rectangle--1 {
   position: absolute;
   left: -80px;
   bottom: -70px;
@@ -118,21 +233,66 @@ header img {
   animation: rotate 4s linear infinite;
   animation-play-state: paused;
 }
-.home .pres--container .pres .circle--1:hover {
+#home .pres--container .pres .rectangle--1:hover {
   animation-play-state: running;
   animation: rotate 4s linear infinite;
 }
-.home .next--section {
+#home .pres--container .pres .rectangle--2 {
+  position: absolute;
+  left: -80px;
+  bottom: -70px;
+  rotate: 0.3turn;
+  height: 190px;
+  width: 150px;
+  border-radius: 150px;
+  background: rgba(155, 155, 226, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  transition: all 1s ease-in-out;
+  animation: rotate 4s linear infinite;
+  animation-play-state: paused;
+}
+#home .pres--container .pres .rectangle--2:hover {
+  animation-play-state: running;
+  animation: rotate 4s linear infinite;
+}
+#home .pres--container .pres .rectangle--3 {
+  position: absolute;
+  left: -80px;
+  bottom: -70px;
+  rotate: 0.6turn;
+  height: 190px;
+  width: 150px;
+  border-radius: 150px;
+  background: rgba(155, 155, 226, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  transition: all 1s ease-in-out;
+  animation: rotate 4s linear infinite;
+  animation-play-state: paused;
+}
+#home .pres--container .pres .rectangle--3:hover {
+  animation-play-state: running;
+  animation: rotate 4s linear infinite;
+}
+#home .next--section {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   animation: bounce 2s ease infinite;
 }
-.home .next--section a svg {
+#home .next--section a {
+  cursor: pointer;
+}
+#home .next--section a svg {
   height: 40px;
   width: 40px;
 }
@@ -160,4 +320,20 @@ header img {
   85% {
     transform: translateY(-5px);
   }
+}
+
+#presentation {
+  padding-top: 20vh;
+}
+#presentation .presentation--container {
+  background: rgba(155, 155, 226, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  padding: 30px;
+}
+#presentation .presentation--container h2 {
+  text-align: center;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

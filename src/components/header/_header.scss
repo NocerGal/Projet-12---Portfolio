@@ -11,6 +11,42 @@ header {
   width: 100%;
   z-index: 2;
   position: fixed;
+
+  .github-corner {
+    .github-logo {
+      color: #fafafa;
+      cursor: pointer;
+      height: 85px;
+      width: 85px;
+    }
+  }
+
+  .github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+  @keyframes octocat-wave {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    20%,
+    60% {
+      transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+      transform: rotate(10deg);
+    }
+  }
+  @media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+      animation: none;
+    }
+    .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+  }
+
   .header--container {
     width: $maxwidth;
     margin: 0 auto;
