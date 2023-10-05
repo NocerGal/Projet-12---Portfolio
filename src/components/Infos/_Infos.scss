@@ -14,7 +14,7 @@
     img {
       border-radius: 30px;
       transform: translateX(-300%);
-      transition: 3.5s ease-in-out;
+      transition: 1.5s ease-in-out;
     }
     .pres {
       display: flex;
@@ -47,7 +47,6 @@
         justify-content: space-evenly;
         overflow: hidden;
         svg {
-          cursor: pointer;
           height: 90px;
           width: 90px;
         }

@@ -3,6 +3,7 @@ import Logo from '../../assets/1.png';
 import {
   redirectSectionPresentation,
   redirectGitHub,
+  redirectSectionRealisation,
 } from '../../functions/redirection/redirection';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +23,7 @@ function Header({ alt }) {
       redirectSectionPresentation();
     },
     Réalisations: () => {
-      console.log('Réalisations clicked');
+      redirectSectionRealisation();
     },
     Services: () => {
       console.log('Services clicked');

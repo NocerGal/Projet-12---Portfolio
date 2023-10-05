@@ -1,0 +1,25 @@
+{
+    "realisations": [
+      {
+        "title": "OhMyFood",
+        "description": "Projet réalisé en HTML, SASS, JS visant à créer un site permettant à un utilisateur de commander des plats à des restaurants pour se les faire livrer à domicile.",
+        "imageLink": "/src/assets/realisations/OMF.webp",
+        "url": "https://nocergal.github.io/Projet-4-OC-OMG/",
+        "date": "2023-10-05T12:00:00Z"
+      },
+      {
+        "title": "KASA",
+        "description": "Projet réalisé en React et SASS visant à créer un site permettant la localisation immobilière entre particulier pour de courtes et moyennes durées.",
+        "imageLink": "/src/assets/realisations/Kasa.webp",
+        "date": "2023-10-05T12:00:00Z"
+      },
+      {
+        "title": "Sophie Bluel - Architecte",
+        "description": "Projet réalisé en HTML et JS afin de créer le portfolio d'une architecte. Ses photographies sont disponibles et affichables selon un filtre que l'utilisateur pourra appliquer.",
+        "imageLink": "/src/assets/realisations/SophieBluel.webp",
+        "url": "https://nocergal.github.io/Projet_6_OC_Cr-ez_une_page_web_dynamique_avec_JavaScript/",
+        "date": "2023-10-05T12:00:00Z"
+      }
+    ]
+  }
+  
